@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenc="http://www.w3.org/2001/12/soap-encoding"   xmlns:soapenv="http://www.w3.org/2001/12/soap-envelope">
+  <soapenv:Body>
+   <m0:createAccountDetails xmlns:m0="http://services.samples">
+      <m0:request>
+        <m0:accountNo>2417255</m0:accountNo>
+        <m0:accountHolderName>BallerinaUser</m0:accountHolderName>
+        <m0:accountBalance>200000.00</m0:accountBalance>
+      </m0:request>
+    </m0:createAccountDetails>
+  </soapenv:Body>
+</soapenv:Envelope>
+ 

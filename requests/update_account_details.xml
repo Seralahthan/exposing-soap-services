@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<soapenv:Envelope xmlns:soapenc="http://www.w3.org/2001/12/soap-encoding"   xmlns:soapenv="http://www.w3.org/2001/12/soap-envelope">
+  <soapenv:Body>
+   <m0:updateAccountDetails xmlns:m0="http://services.samples">
+      <m0:request>
+        <m0:accountNo>2417255</m0:accountNo>
+        <m0:accountBalance>375000.00</m0:accountBalance>
+      </m0:request>
+    </m0:updateAccountDetails>
+  </soapenv:Body>
+</soapenv:Envelope>
