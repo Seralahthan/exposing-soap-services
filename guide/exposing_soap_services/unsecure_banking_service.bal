@@ -1,7 +1,18 @@
 import ballerina/http;
 import ballerina/io;
 import ballerina/log;
+import ballerinax/docker;
 
+//@docker:Config {
+//    registry:"ballerina.guides.io",
+//    name:"unsecure_banking_service",
+//    tag:"v1.0"
+//}
+
+//@docker:Expose{}
+//endpoint http:Listener soapHandlerEndpoint {
+//    port:9090
+//};
 
 endpoint http:Listener soapHandlerEndpoint {
     port: 9090

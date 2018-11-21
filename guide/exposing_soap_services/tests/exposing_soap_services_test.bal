@@ -11,7 +11,9 @@ endpoint http:Client clientEP {
     url:"http://localhost:9090/soapService"
 };
 
-@test:Config {}
+@test:Config {
+    groups: ["group1"]
+}
 function createAccountDetails() {
     io:println("Running the test for : Creating account details");
     http:Request req;
@@ -78,7 +80,8 @@ function createAccountDetails() {
 }
 
 @test:Config {
-    dependsOn: ["createAccountDetails"]
+    dependsOn: ["createAccountDetails"],
+    groups: ["group2"]
 }
 function getAccountDetails() {
     io:println("Running the test for : Fetching account details");
@@ -138,7 +141,8 @@ function getAccountDetails() {
 }
 
 @test:Config {
-    dependsOn: ["getAccountDetails"]
+    dependsOn: ["getAccountDetails"],
+    groups: ["group3"]
 }
 function updateAccountDetails() {
     io:println("Running the test for : Updating account details");
@@ -198,7 +202,8 @@ function updateAccountDetails() {
 }
 
 @test:Config {
-    dependsOn: ["updateAccountDetails"]
+    dependsOn: ["updateAccountDetails"],
+    groups: ["group4"]
 }
 function deleteAccountDetails() {
     io:println("Running the test for : Removing account details");
